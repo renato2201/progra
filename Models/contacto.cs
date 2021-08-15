@@ -7,4 +7,5 @@ namespace PROGRA.Models
         public string telefono { get;set;}
         public string comentarios { get;set;}
     }
+    
 }
