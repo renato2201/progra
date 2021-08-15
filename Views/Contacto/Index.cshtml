@@ -1,3 +1,4 @@
+@model PROGRA.Models.contacto
 @{
     ViewData["Title"] = "Contacto";
 }
@@ -6,5 +7,19 @@
 
 <div class="text-center">
     <h1 class="display-4">Formulario de contacto</h1>
-    
+    <form asp-controller="Contacto" asp-action="Index">
+        <label asp-for="nombre" class="control-label"></label>
+        <input asp-for="nombre" class="form-control" />
+
+        <label asp-for="correo" class="control-label"></label>
+        <input asp-for="correo" class="form-control" />
+
+        <label asp-for="telefono" class="control-label"></label>
+        <input asp-for="telefono" class="form-control" />
+
+        <label asp-for="comentarios" class="control-label"></label>
+        <input asp-for="comentarios" class="form-control" />
+       
+    </form>
+
 </div>
