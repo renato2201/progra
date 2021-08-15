@@ -1,0 +1,32 @@
+@model PROGRA.Models.Calculadora
+@{
+    ViewData["Title"] = "Calculadora";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <form asp-controller="Calculadora" asp-action="Calcular">
+        <label asp-for="Operando1" class="control-label"></label>
+        <input asp-for="Operando1" class="form-control" />
+
+        <label asp-for="Operando2" class="control-label"></label>
+        <input asp-for="Operando2" class="form-control" />
+        <br>
+        <label asp-for="Operador" class="control-label"></label>
+        <br>
+        <select asp-for="Operador">
+            <option value="+">Suma</option>
+            <option value="-">Resta</option>
+            <option value ="*">Multiplicación</option>
+            <option value="/">División</option>
+        </select>
+        <br><br>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </div>
+    </form>
+    <h1>@ViewData["Message"]</h1>
+
+</div>

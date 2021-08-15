@@ -9,5 +9,11 @@ namespace PROGRA.Controllers
         {
             return View();
         }
+
+        public IActionResult Create()
+        {
+            ViewData["Message"] = "El contacto ya se ha registrado";
+            return View("Index");
+        }
     }
 }
